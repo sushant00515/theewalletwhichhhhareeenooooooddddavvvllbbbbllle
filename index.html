@@ -1,0 +1,64 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SushAnt</title>
+   
+   <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="main">
+    <div class="photo">
+        <img alt="" src="habibi.jpg" style="width:50px; height: 50px; border-radius: 90%;">
+    </div>
+              <div class="medium">Cash App</div>
+    <div class="second">
+        <img alt="" src="Cash_App-Logo.wine.png" style="width:50px; height: 50px;">
+    </div>
+</div>
+    <div class="mid">
+         <h1>$</h1><div id="number">17392924</div>
+    </div>
+    <div class="send">
+        Enter Amount to Transfer:
+    </div><br>
+    <div class="field">
+        <form id="walletForm" onsubmit="return handleSubmit()">
+            <input type="text" placeholder="Enter Username" id="username">
+            <br>
+            <input type="text" placeholder="Enter Amount" id="balance">
+            <br>
+            <br>
+            <div class="button">
+                <button id="sendto"> Pay</button>
+               
+            </div>
+            
+        </form>
+    
+        <script src="variables.js"></script>
+    <script>
+        // Handle form submission
+        function handleSubmit() {
+            // Get values from the form
+            const username = document.getElementById('username').value;
+            const balance = document.getElementById('balance').value;
+
+            // Use the VariableHandler class to redirect with parameters
+            const variableHandler = new VariableHandler(username, balance);
+            variableHandler.redirectToPage();
+
+            // Prevent the form from submitting and refreshing the page
+            return false;
+        }
+    </script>
+</div>
+
+</script>
+    <script src="document.js"></script>
+</body>
+</html>
+
+</html>
